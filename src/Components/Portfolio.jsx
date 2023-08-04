@@ -10,7 +10,13 @@ import { useState } from 'react';
 export default function Portfolio() {
   const [showMore, setShowMore] = useState('hidden');
   const [hideMore, setHideMore] = useState('block');
-
+  const scrollToSection = () => {
+    // Replace 'sectionID' with the ID of the section you want to scroll to
+    const section = document.getElementById('sectionID');
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   const HandleShowMore = () => {
     setShowMore('block');
     setHideMore('hidden');
@@ -18,6 +24,7 @@ export default function Portfolio() {
   const HandleHideMore = () => {
     setShowMore('hidden');
     setHideMore('block');
+    scrollToSection();
   };
 
   return (
@@ -62,6 +69,7 @@ export default function Portfolio() {
           <div className="flex justify-center items-center lg:hidden  lg:mt-[40px] mt-[28px] ">
             <button
               className={`${hideMore} border border-r-0 border-l-0 border-t-0 border-b-2 border-b-[#FFFFFF]`}
+              id="sectionID"
               onClick={HandleShowMore}>
               view more
             </button>
