@@ -1,31 +1,40 @@
 import React from 'react';
-
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Homee from './Components/Homee';
 import Header from './Components/header';
-import Portfolio from './Components/Portfolio';
-import Certificate from './Components/Certificate';
-import Experience from './Components/Experience';
-import Skills from './Components/Skills';
+
 import Contact from './Components/Contact';
-import Media from './Components/Media';
+import About from './Components/About';
+import Services from './Components/Services';
 
 function App() {
-  return (
-    <div className="bg-[#0A0A0A]">
-      <Header />
+	return (
+		<div className="mx-0 overflow-x-hidden font-lato">
+			<BrowserRouter>
+				<Header />
+				<Routes>
+					<Route
+						path="/"
+						element={<Homee />}
+					/>
 
-      <Homee />
-      <Portfolio />
-
-      <div className="bg-[#0A0A0A]">
-        <Experience />
-        <Certificate />
-        <Skills />
-        <Contact />
-        <Media />
-      </div>
-    </div>
-  );
+					<Route
+						path="Services"
+						element={<Services />}
+					/>
+					<Route
+						path="About"
+						element={<About />}
+					/>
+					<Route
+						path="contacts"
+						element={<Contact />}
+					/>
+				</Routes>
+			</BrowserRouter>
+		</div>
+	);
 }
 
 export default App;

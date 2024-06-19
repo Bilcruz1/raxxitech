@@ -1,0 +1,3 @@
+.about-container {
+	transition: background-image 3s ease-in-out; /* Add a transition effect */
+}
