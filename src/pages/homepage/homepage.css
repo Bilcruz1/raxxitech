@@ -1,0 +1,45 @@
+.text-gradient {
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+	background-image: linear-gradient(
+		to right,
+		#4880e3,
+		#ffffff,
+		#ffffff,
+		#4880e3
+	);
+}
+.text-gradientt {
+	background-clip: text;
+	-webkit-background-clip: text;
+	color: transparent;
+	background-image: linear-gradient(
+		to right,
+		#ffffff,
+		#c1cee5,
+		#a9c6f8,
+		#ffffff
+	);
+}
+
+.fade-in {
+	animation: fadeIn 5s ease forwards;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes swipeIn {
+	from {
+		transform: translateY(100%);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
